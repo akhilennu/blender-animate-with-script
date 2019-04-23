@@ -1,4 +1,4 @@
-import random
+import random, bpy
 def init_text_animation(text_for_animation):
 	bpy.ops.object.delete(use_global=False) # delete the cube
 	bpy.context.scene.frame_end = 101 #set animation end frame as 101
