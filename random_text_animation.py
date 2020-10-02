@@ -6,8 +6,8 @@ def init_text_animation(text_for_animation):
 	i=2 # 2 objects already exist, one in camera and the other is lamp
 	for ch in text_for_animation: #for each character in the text
 		if(ch != ' '):	
-			bpy.ops.object.text_add(view_align=False, enter_editmode=False, location=(xval, 0, 0), layers=(True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False))
-			bpy.ops.transform.rotate(value=1.5708, axis=(1, 0, 0), constraint_axis=(True, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1)
+			bpy.ops.object.text_add(enter_editmode=False, align='WORLD', location=(xval, 0, 0), scale=(1, 1, 1))
+			bpy.ops.transform.rotate(value=1.5708, orient_axis='X', orient_type='GLOBAL', orient_matrix=((1, 0, 0), (0, 1, 0), (0, 0, 1)), orient_matrix_type='GLOBAL', constraint_axis=(True, False, False), mirror=True, use_proportional_edit=False, proportional_edit_falloff='SMOOTH', proportional_size=1, use_proportional_connected=False, use_proportional_projected=False)
 			bpy.ops.object.editmode_toggle()
 			bpy.ops.font.delete(type='PREVIOUS_OR_SELECTION')
 			bpy.ops.font.delete(type='PREVIOUS_OR_SELECTION')
@@ -27,4 +27,3 @@ def init_text_animation(text_for_animation):
 		xval = xval + 0.6
 
 init_text_animation("I love open source by Akhil Ennu") #****************Edit Here*************************
-
