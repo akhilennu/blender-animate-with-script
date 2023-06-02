@@ -26,4 +26,4 @@ def init_text_animation(text_for_animation):
 			i = i+1
 		xval = xval + 0.6
 
-init_text_animation("I love open source by Akhil Ennu") #****************Edit Here*************************
+init_text_animation("Code with Akhil") #****************Edit Here*************************
